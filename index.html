@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezekiel Akinyelu - Creative Designer & Developer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="background"></div>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Header -->
+        <header class="header">
+            <div class="nav-container">
+                <div class="logo-section" onclick="scrollToSection('home')">
+                    <img src="image/logo.png" alt="Ezekiel Akinyelu Logo" class="logo">
+                    <div class="logo-text">
+                        <h1>Ezekiel Akinyelu</h1>
+                        <p>Creative Designer</p>
+                    </div>
+                </div>
+                
+                <nav>
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="#home" class="nav-link active" onclick="scrollToSection('home')">Home</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link" onclick="scrollToSection('about')">About</a></li>
+                        <li class="nav-item"><a href="#services" class="nav-link" onclick="scrollToSection('services')">Services</a></li>
+                        <li class="nav-item"><a href="#portfolio" class="nav-link" onclick="scrollToSection('portfolio')">Portfolio</a></li>
+                        <li class="nav-item"><a href="#testimonials" class="nav-link" onclick="scrollToSection('testimonials')">Testimonials</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link" onclick="scrollToSection('contact')">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="mobile-nav" id="mobileNav">
+                <a href="#home" class="nav-link" onclick="scrollToSection('home'); closeMobileMenu()">Home</a>
+                <a href="#about" class="nav-link" onclick="scrollToSection('about'); closeMobileMenu()">About</a>
+                <a href="#services" class="nav-link" onclick="scrollToSection('services'); closeMobileMenu()">Services</a>
+                <a href="#portfolio" class="nav-link" onclick="scrollToSection('portfolio'); closeMobileMenu()">Portfolio</a>
+                <a href="#testimonials" class="nav-link" onclick="scrollToSection('testimonials'); closeMobileMenu()">Testimonials</a>
+                <a href="#contact" class="nav-link" onclick="scrollToSection('contact'); closeMobileMenu()">Contact</a>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="section">
+                <h1>Creative Designer<br>& Developer</h1>
+                <p class="subtitle">
+                    I bring ideas to life through compelling visuals, seamless web experiences, 
+                    and captivating motion graphics. From concept to completion, I craft digital 
+                    solutions that leave lasting impressions.
+                </p>
+                
+                <div class="skills-grid">
+                    <div class="skill-tag"><i class="fas fa-play"></i> Video Editing</div>
+                    <div class="skill-tag"><i class="fas fa-camera"></i> Cinematography</div>
+                    <div class="skill-tag"><i class="fas fa-palette"></i> Graphics Design</div>
+                    <div class="skill-tag"><i class="fas fa-code"></i> Web Development</div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#portfolio" class="btn btn-primary" onclick="scrollToSection('portfolio')">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary" onclick="scrollToSection('contact')">Get In Touch</a>
+                </div>
+                
+                <div style="margin-top: 3rem; text-align: center;">
+                    <i class="fas fa-chevron-down scroll-indicator" onclick="scrollToSection('about')"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-overlay">
+                <div class="section-title">
+                    <h2>About <span class="highlight">Me</span></h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div>
+                        <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">
+                            Crafting Digital Experiences with <span class="highlight">Passion</span>
+                        </h3>
+                        
+                        <p style="color: #d1d5db; margin-bottom: 1.5rem; line-height: 1.8;">
+                            Hi, I'm Ezekiel Akinyelu, a passionate creative designer and developer based in Nigeria. 
+                            With over 3 years of experience in the digital creative industry, I specialize in bringing 
+                            ideas to life through compelling visual storytelling and seamless web experiences.
+                        </p>
+                        
+                        <p style="color: #d1d5db; margin-bottom: 1.5rem; line-height: 1.8;">
+                            My journey began with a fascination for visual aesthetics and has evolved into a comprehensive 
+                            skill set spanning video editing, motion graphics, logo animation, web development, graphic design, 
+                            and cinematography. I believe in the power of combining technical expertise with creative vision 
+                            to deliver exceptional results.
+                        </p>
+                        
+                        <p style="color: #d1d5db; margin-bottom: 2rem; line-height: 1.8;">
+                            When I'm not designing or coding, you'll find me exploring new creative techniques, 
+                            staying updated with industry trends, and collaborating with fellow creatives to push 
+                            the boundaries of what's possible in digital media.
+                        </p>
+                        
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                            <span class="skill-badge">Adobe Creative Suite</span>
+                            <span class="skill-badge">HTML/CSS</span>
+                            <span class="skill-badge">JavaScript</span>
+                            <span class="skill-badge">React</span>
+                            <span class="skill-badge">After Effects</span>
+                            <span class="skill-badge">Premiere Pro</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <i class="fas fa-award"></i>
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-users"></i>
+                            <div class="stat-number">25+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-coffee"></i>
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Cups of Coffee</div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-clock"></i>
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <div class="section-title">
+                <h2>My <span class="highlight">Services</span></h2>
+                <div class="title-underline"></div>
+                <p style="color: #d1d5db; max-width: 600px; margin: 0 auto;">
+                    I offer comprehensive creative services to help bring your vision to life. 
+                    From concept to completion, I deliver high-quality results that exceed expectations.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <h3>Video Editing</h3>
+                    <p>Professional video editing with seamless transitions, color grading, and storytelling that captivates your audience.</p>
+                    <ul class="service-features">
+                        <li>Color Correction</li>
+                        <li>Motion Graphics</li>
+                        <li>Audio Sync</li>
+                        <li>Multi-cam Editing</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Motion Graphics</h3>
+                    <p>Dynamic animations and motion graphics that bring static designs to life with fluid, engaging movements.</p>
+                    <ul class="service-features">
+                        <li>2D Animation</li>
+                        <li>3D Effects</li>
+                        <li>Typography Animation</li>
+                        <li>Visual Effects</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brush"></i>
+                    </div>
+                    <h3>Logo Animation</h3>
+                    <p>Transform your brand identity with captivating logo animations that make memorable first impressions.</p>
+                    <ul class="service-features">
+                        <li>Brand Animation</li>
+                        <li>Logo Reveals</li>
+                        <li>Corporate Intros</li>
+                        <li>Brand Guidelines</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Modern, responsive websites built with HTML, CSS, and JavaScript for optimal user experience.</p>
+                    <ul class="service-features">
+                        <li>Responsive Design</li>
+                        <li>Interactive UI</li>
+                        <li>Performance Optimization</li>
+                        <li>Cross-browser Compatibility</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Graphics Design</h3>
+                    <p>Creative visual solutions including branding, print design, and digital graphics that communicate effectively.</p>
+                    <ul class="service-features">
+                        <li>Brand Identity</li>
+                        <li>Print Design</li>
+                        <li>Digital Graphics</li>
+                        <li>UI/UX Design</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Cinematography</h3>
+                    <p>Professional cinematography services with creative vision and technical expertise for compelling visual narratives.</p>
+                    <ul class="service-features">
+                        <li>Commercial Videos</li>
+                        <li>Documentary Style</li>
+                        <li>Event Coverage</li>
+                        <li>Creative Storytelling</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <button class="btn btn-primary" onclick="scrollToSection('contact')">Let's Work Together</button>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section">
+            <div class="section-overlay">
+                <div class="section-title">
+                    <h2>My <span class="highlight">Portfolio</span></h2>
+                    <div class="title-underline"></div>
+                    <p style="color: #d1d5db; max-width: 600px; margin: 0 auto;">
+                        Explore a selection of my recent work spanning various creative disciplines. 
+                        Each project represents a unique challenge solved with creative excellence.
+                    </p>
+                </div>
+                
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" onclick="filterPortfolio('all')">All Work</button>
+                    <button class="filter-btn" onclick="filterPortfolio('video')">Video Editing</button>
+                    <button class="filter-btn" onclick="filterPortfolio('motion')">Motion Graphics</button>
+                    <button class="filter-btn" onclick="filterPortfolio('web')">Web Design</button>
+                    <button class="filter-btn" onclick="filterPortfolio('graphics')">Graphics Design</button>
+                </div>
+                
+                <div class="portfolio-grid" id="portfolioGrid">
+                    <!-- Video Projects -->
+                    <div class="portfolio-item" data-category="video" onclick="openPortfolioModal('video1')">
+                        <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=300&fit=crop');">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span>Watch Video</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Corporate Brand Video</h3>
+                            <p>Professional corporate video with motion graphics and brand storytelling.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="video" onclick="openPortfolioModal('video2')">
+                        <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=500&h=300&fit=crop');">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span>Watch Video</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Product Showcase Video</h3>
+                            <p>High-quality product video with cinematic lighting and effects.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Motion Graphics Projects -->
+                    <div class="portfolio-item" data-category="motion" onclick="openPortfolioModal('motion1')">
+                        <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop');">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span>Watch Animation</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Logo Animation Reel</h3>
+                            <p>Collection of dynamic logo animations for various brands.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="motion" onclick="openPortfolioModal('motion2')">
+                        <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop');">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span>Watch Animation</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Animated Infographics</h3>
+                            <p>Data visualization through engaging animated infographics.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Web Design Projects -->
+                    <div class="portfolio-item" data-category="web" onclick="openPortfolioModal('web1')">
+                        <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop');">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <i class="fas fa-eye"></i>
+                                    <span>View Website</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>E-commerce Website</h3>
+                            <p>Modern responsive e-commerce website with interactive features.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="web" onclick="openPortfolioModal('web2')">
+                        <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop');">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <i class="fas fa-eye"></i>
+                                    <span>View Website</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Portfolio Website</h3>
+                            <p>Creative portfolio website with smooth animations and interactions.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Graphics Design Projects -->
+                    <div class="portfolio-item" data-category="graphics" onclick="openPortfolioModal('graphics1')">
+                        <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop');">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <i class="fas fa-image"></i>
+                                    <span>View Design</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Brand Identity Package</h3>
+                            <p>Complete brand identity design including logo, colors, and guidelines.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="graphics" onclick="openPortfolioModal('graphics2')">
+                        <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&h=300&fit=crop');">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <i class="fas fa-image"></i>
+                                    <span>View Design</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Event Poster Design</h3>
+                            <p>Eye-catching poster design for music festival event.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem;">
+                    <p style="color: #d1d5db; margin-bottom: 1.5rem;">
+                        Interested in seeing more of my work or discussing a project?
+                    </p>
+                    <button class="btn btn-secondary" onclick="scrollToSection('contact')">Let's Discuss Your Project</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section">
+            <div class="section-title">
+                <h2>Client <span class="highlight">Testimonials</span></h2>
+                <div class="title-underline"></div>
+                <p style="color: #d1d5db; max-width: 600px; margin: 0 auto;">
+                    Don't just take my word for it. Here's what my clients have to say about working with me.
+                </p>
+            </div>
+            
+            <div class="testimonial-container">
+                <div class="testimonial active" id="testimonial-0">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    
+                    <div class="stars">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    
+                    <blockquote class="testimonial-quote">
+                        "Ezekiel delivered exceptional work on our corporate video project. His attention to detail and creative vision exceeded our expectations. The motion graphics and editing were absolutely phenomenal, and he completed everything ahead of schedule. Highly recommend!"
+                    </blockquote>
+                    
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b167?w=150&h=150&fit=crop&crop=face" alt="Sarah Johnson" class="author-image">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <p>Marketing Director, TechFlow Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial" id="testimonial-1">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    
+                    <div class="stars">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    
+                    <blockquote class="testimonial-quote">
+                        "Working with Ezekiel was a game-changer for our brand. His logo animation and web development skills brought our vision to life perfectly. Professional, creative, and always responsive to feedback. The final results were beyond impressive!"
+                    </blockquote>
+                    
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Michael Chen" class="author-image">
+                        <div>
+                            <h4>Michael Chen</h4>
+                            <p>CEO, StartupHub</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial" id="testimonial-2">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    
+                    <div class="stars">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    
+                    <blockquote class="testimonial-quote">
+                        "Ezekiel is an incredibly talented creative professional. His graphics design and cinematography work for our campaign was outstanding. He has a unique ability to understand client needs and translate them into compelling visual stories. Absolutely fantastic to work with!"
+                    </blockquote>
+                    
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" alt="Emily Rodriguez" class="author-image">
+                        <div>
+                            <h4>Emily Rodriguez</h4>
+                            <p>Creative Director, DesignStudio</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-controls">
+                    <button class="control-btn" onclick="previousTestimonial()">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="control-btn" onclick="nextTestimonial()">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="testimonial-dots">
+                    <div class="dot active" onclick="showTestimonial(0)"></div>
+                    <div class="dot" onclick="showTestimonial(1)"></div>
+                    <div class="dot" onclick="showTestimonial(2)"></div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: #9ca3af; font-size: 0.9rem;">Ready to join these satisfied clients?</p>
+                <button class="btn btn-primary" style="margin-top: 1rem;" onclick="scrollToSection('contact')">Let's start your project →</button>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="section-overlay">
+                <div class="section-title">
+                    <h2>Get In <span class="highlight">Touch</span></h2>
+                    <div class="title-underline"></div>
+                    <p style="color: #d1d5db; max-width: 600px; margin: 0 auto;">
+                        Ready to bring your creative vision to life? Let's discuss your project and explore 
+                        how we can work together to create something amazing.
+                    </p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Let's Connect</h3>
+                        <p style="color: #d1d5db; margin-bottom: 2rem; line-height: 1.6;">
+                            Whether you have a project in mind, need a creative consultation, or just want to say hello, 
+                            I'm always excited to hear from potential collaborators and clients.
+                        </p>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:ezekielakinyelu17@gmail.com">ezekielakinyelu17@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+2348166299252">+2348166299252</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <span>Nigeria</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Response Time</h4>
+                                <span>Within 24 hours</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-expectation">
+                            <h4><i class="fas fa-check-circle"></i> What to Expect</h4>
+                            <ul>
+                                <li>• Quick response within 24 hours</li>
+                                <li>• Free initial consultation</li>
+                                <li>• Detailed project proposal</li>
+                                <li>• Transparent pricing</li>
+                                <li>• Regular progress updates</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Send a Message</h3>
+                        
+                        <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" required placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn" id="submitBtn">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                        
+                        <p class="form-note">
+                            All messages are sent directly to ezekielakinyelu17@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <h3>Ready to Start Your <span class="highlight">Creative Journey?</span></h3>
+                <p>Let's collaborate and bring your vision to life through exceptional design and development.</p>
+                <button class="btn btn-primary" onclick="scrollToSection('contact')">Start a Project</button>
+                
+                <div class="footer-bottom">
+                    <div class="footer-text">
+                        <span>&copy; 2025 Ezekiel Akinyelu. All rights reserved.</span>
+                    </div>
+                    
+                    <div class="footer-text">
+                        <span>Made with</span>
+                        <i class="fas fa-heart"></i>
+                        <span>for creative excellence</span>
+                    </div>
+                    
+                    <button class="scroll-top" onclick="scrollToTop()">
+                        <i class="fas fa-chevron-up"></i>
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Portfolio Modal -->
+    <div class="portfolio-modal" id="portfolioModal">
+        <div class="modal-overlay" onclick="closePortfolioModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closePortfolioModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="modal-header">
+                <h3 id="modalTitle">Project Title</h3>
+                <span id="modalCategory" class="modal-category">Category</span>
+            </div>
+            
+            <div class="modal-media" id="modalMedia">
+                <!-- Media content will be inserted here -->
+            </div>
+            
+            <div class="modal-description">
+                <p id="modalDescription">Project description</p>
+                
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <strong>Client:</strong> <span id="modalClient">Client Name</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Duration:</strong> <span id="modalDuration">Project Duration</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Technologies:</strong> <span id="modalTech">Technologies Used</span>
+                    </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <button class="btn btn-primary" id="modalPrimaryBtn">
+                        <i class="fas fa-play"></i>
+                        Watch Video
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('contact'); closePortfolioModal()">
+                        <i class="fas fa-envelope"></i>
+                        Get Similar Project
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Popup -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <button class="close-popup" onclick="closePopup()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="popup-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            
+            <h3>Message Sent Successfully!</h3>
+            <p>Thank you for reaching out! I'll get back to you within 24 hours. Your message has been sent to my email inbox.</p>
+            
+            <button class="btn btn-primary" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
