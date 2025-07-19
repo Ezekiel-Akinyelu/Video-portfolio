@@ -403,14 +403,14 @@ function handleFormSubmit(event) {
     };
     emailjs.send('service_je9gocq', 'template_94w3u2g', emailData)
         .then(function(response) {
-            submitBtn.innerHTML = originalText;
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
             submitBtn.disabled = false;
     
             showPopup();
             contactForm.reset();
             console.log('Email sent successfully:', response);
         }, function(error) {
-            submitBtn.innerHTML = originalText;
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
             submitBtn.disabled = false;
     
             showNotification('Oops! Something went wrong. Please try again later.', 'error');
