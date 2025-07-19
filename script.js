@@ -401,27 +401,21 @@ function handleFormSubmit(event) {
         subject: formData.get('subject'),
         message: formData.get('message')
     };
+    emailjs.send('service_je9gocq', 'template_94w3u2g', emailData)
+        .then(function(response) {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
     
-    // Simulate sending process
-    setTimeout(() => {
-        // Create mailto link for automatic email sending
-        const subject = encodeURIComponent(`Portfolio Contact: ${emailData.subject}`);
-        const body = encodeURIComponent(
-            `Name: ${emailData.name}\nEmail: ${emailData.email}\nSubject: ${emailData.subject}\n\nMessage:\n${emailData.message}\n\n---\nSent from Ezekiel Akinyelu Portfolio Website`
-        );
-        const mailtoLink = `mailto:ezekielakinyelu17@gmail.com?subject=${subject}&body=${body}`;
-        
-        // Open email client
-        window.location.href = mailtoLink;
-        
-        // Reset form and show success popup
-        event.target.reset();
-        showPopup();
-        
-        // Reset button
-        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-        submitBtn.disabled = false;
-    }, 2000);
+            showPopup();
+            contactForm.reset();
+            console.log('Email sent successfully:', response);
+        }, function(error) {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+    
+            showNotification('Oops! Something went wrong. Please try again later.', 'error');
+            console.error('Email sending failed:', error);
+        });
 }
 
 // Popup functionality
