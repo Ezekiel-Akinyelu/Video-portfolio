@@ -755,7 +755,6 @@ body {
 .testimonial.active {
     opacity: 1;
     transform: translateX(0);
-    position: relative;
 }
 
 .quote-icon {
